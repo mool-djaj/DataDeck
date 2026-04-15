@@ -5,12 +5,12 @@ class Creature(ABC):
     def __init__(self, name: str, typ: str) -> None:
         self.name = name
         self.typ = typ
-    
+
     @abstractmethod
     def attack(self) -> str:
         """Abstract method to be implemented by concrete creatures."""
         pass
-        
+
     def describe(self) -> str:
         """Concrete generic method returning a standard message."""
         return f"{self.name} is a {self.typ} type Creature"
